@@ -5,6 +5,17 @@
     "vetur.format.defaultFormatter.html": "js-beautify-html",
     "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
     "eslint.autoFixOnSave": true,
+    "eslint.workingDirectories": [
+      { 
+        "directory": "./client", 
+        "changeProcessCWD": true
+      },
+      { 
+        "directory": "./server", 
+        "changeProcessCWD": true
+      }
+    ],
+    "eslint.options": { "configFile": "./.eslintrc.js" },
     "eslint.validate": [
         {
         "language": "vue",
@@ -19,5 +30,6 @@
         "autoFix": true
         }
     ],
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+
 }

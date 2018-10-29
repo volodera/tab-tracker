@@ -29,11 +29,11 @@ module.exports = {
     }],
     "indent": ["error", 2]
   },
-  settings: {
-    'import/resolver': {
-      node: {
-        extensions: ['.js','.jsx','.vue']
-      }
-    },
+  settings: { 
+    'import/resolver': { 
+      webpack: { 
+        config: require.resolve('@vue/cli-service/webpack.config.js') 
+      } 
+    }, 
   }
 }
