@@ -6,6 +6,7 @@ module.exports = {
      "browser": true
     },
     "extends": [ "airbnb", "plugin:import/warnings" ],
+    "parser": "babel-eslint",
     "parserOptions": {
      "ecmaVersion": 6,
      "sourceType": "module",
