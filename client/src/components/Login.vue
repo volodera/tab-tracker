@@ -16,7 +16,7 @@
                 <v-toolbar
                   dark
                   color="primary">
-                  <v-toolbar-title>Register form</v-toolbar-title>
+                  <v-toolbar-title>Login form</v-toolbar-title>
                   <v-spacer/>
                 </v-toolbar>
                 <v-card-text>
@@ -47,7 +47,7 @@
                   <v-spacer/>
                   <v-btn
                     color="primary"
-                    @click="register">Register</v-btn>
+                    @click="login">Login</v-btn>
                 </v-card-actions>
               </v-card>
             </v-flex>
@@ -71,9 +71,9 @@ export default {
     };
   },
   methods: {
-    async register() {
+    async login() {
       try {
-        await AuthenticationService.register({
+        await AuthenticationService.login({
           email: this.email,
           password: this.password,
         });
