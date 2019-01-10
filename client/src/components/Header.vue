@@ -24,6 +24,7 @@
 
     <v-tooltip bottom>
       <v-btn
+        v-if="!$store.state.isUserLoggedIn"
         slot="activator"
         :to="{name: 'login'}"
         icon
@@ -35,6 +36,7 @@
 
     <v-tooltip bottom>
       <v-btn
+        v-if="!$store.state.isUserLoggedIn"
         slot="activator"
         :to="{name: 'register'}"
         icon

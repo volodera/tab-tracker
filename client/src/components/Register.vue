@@ -73,10 +73,13 @@ export default {
   methods: {
     async register() {
       try {
-        await AuthenticationService.register({
+        const response = await AuthenticationService.register({
           email: this.email,
           password: this.password,
         });
+        this.$store.dispatch('setToken', response.data.token);
+        this.$store.dispatch('setUser', response.data.user);
+        this.showError = false;
       } catch (error) {
         this.showError = true;
         this.error = typeof error.response !== 'undefined' ? error.response.data.error : 'No server response!';
